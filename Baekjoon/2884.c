@@ -7,7 +7,11 @@ int main()
     if(m < 0) {
         h -= 1;
         m += 60;
-        printf("%d %d", &h, &m);
+        
+        if (h < 0) {
+            h = 23;
+        }
     }
+    printf("%d %d", h, m);
     return 0;
 }
